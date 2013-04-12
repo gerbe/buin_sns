@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>出欠簿</title>
+    <meta name="description" content="サークルの出欠が管理できる出欠簿です。シカトするとポイントが貯まる悲しい仕様になっています。スマホ最適です。">
+    <meta name="keywords" content="サークル,出欠,ツール,シカト">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36763098-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
+    </head>
+    <body>
+    <div data-role="page" id="register_form">
+        <div data-role="header" data-position="inline">
+            <h1>出欠簿の新規登録</h1>
+            <a rel="external" href="admin.php" class="ui-btn-right">ログイン</a>
+        </div>
+        <div data-role="content">
+            <form action='register.php' method="POST" data-ajax="false">
+                <label for="clubid">サークルID（半角英数）</label>
+                <input name="clubid" id="clubid" type="text">
+                <label for="primary">パスワード（半角英数）</label>
+                <input id="primary" name="password" type="password">
+                <label for="email">管理者メールアドレス</label>
+                <input name="email" id="email" type="text" placeholder="example@email.com"><br>
+                <div data-role="collapsible">
+                    <h3>このサービスについて（必読）</h3>
+                    <p style="font-size:9pt;">
+                            このサービスは完全に趣味で運営してます。<br>
+                            用途：サークルなどの出欠管理ができます。出欠確認をシカトするとポイントが貯まるような設計になってます。<br>
+                            注意：サークルの出欠簿はURLさえわかれば誰でも見れちゃいます。制限をかけたり、登録を抹消したりは未実装です。<br>
+                            プライバシー等：基本的に自己責任でお願いします。。<br>
+                            以上、ご了承いただければ登録のボタンを押していただければ幸いです。
+                    </p>
+                </div><br>
+                <input type="submit" value="登録">
+            </form>
+            <p style="text-align: right;">ログインは<a href="admin.php">こちら</a>から</p>
+        </div>
+    </div>
+    </body>
+</html>
